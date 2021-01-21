@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "lib",
+    "sourceMap": true,
+    "importHelpers": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "types": [
+    "webpack-env",
+    "vuetify"
+  ],
+  "baseUrl": ".",
+  "paths": {
+    "@/*": [
+      "src/*",
+    ]
+  },
+  "lib": [
+    "esnext",
+    "dom",
+    "dom.iterable",
+    "scripthost"
+  ],
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["src/stories"],
+}

@@ -1,0 +1,30 @@
+@function font-weight($keyword) {
+	$conversion-map: (
+	  thin: 100,
+	  extra light: 200,
+	  extralight: 200,
+	  light: 300,
+	  normal: 400,
+	  regular: 400,
+	  medium: 500,
+	  semi bold: 600,
+	  semibold: 600,
+	  bold: 700,
+	  extra bold: 800,
+	  extrabold: 800,
+	  black: 900,
+	  heavy: 900,
+	);
+
+	@if not map-has-key($conversion-map, $keyword) {
+		@error "Unsupported `font-weight` keyword `#{$keyword}`";
+
+    @return null;
+	}
+
+  @return map-get($conversion-map, $keyword);
+}
+
+@mixin font-weight($keyword) {
+  font-weight: font-weight($keyword);
+}
